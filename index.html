@@ -11,6 +11,7 @@
   <!-- Stylesheets-->
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
@@ -31,6 +32,74 @@
     }
   </style>
 </head>
+<!-- MODAL CONTATO -->
+<div class="modal fade" id="modalContato">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title">CONTATOS</h5>
+        <button type="button" class="close" data-dismiss="modal">×</button>
+      </div>
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="row row-40 justify-content-lg-between">
+          <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+            <ul class="footer-contacts d-inline-block d-sm-block">
+              <li>
+                <div class="unit">
+                  <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                  <div class="unit-body"><a class="link-phone" href="https://wa.me/5521964867152">+55 21-96486-7152</a></div>
+                </div>
+              </li>
+              <li>
+                <div class="unit">
+                  <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                  <div class="unit-body"><a class="link-aemail" href="mailto:marcosofazendeiro@gmail.com">marcosofazendeiro@gmail.com</a></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- MODAL SOBRE -->
+<div class="modal fade" id="modalSobre">
+  <div class="modal-dialog">
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title">MAIS INFORMAÇÕES</h5>
+        <button type="button" class="close" data-dismiss="modal">×</button>
+      </div>
+      
+      <!-- Modal body -->
+      <div class="modal-body">
+        Estamos comprometido em trazer aos nossos clientes o melhor em termos de valor e planos de viagem de qualidade. Somos apaixonados por viajar e por compartilhar as maravilhas do Rio com você.
+        <br><br>
+        Temos o orgulho de oferecer uma excelente qualidade em nossos passeios, que lhe dão a chance de vivenciar o destino escolhido de uma forma autêntica e emocionante.
+        <br><br>
+        Nossa missão é fornecer a melhor experiência em planejamento de viagens, trazendo segurança e conforto para toddo seu passeio.
+      </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 <body>
   <div class="ie-panel">
@@ -221,21 +290,21 @@
                     <div class="tab-pane fade show active" id="tabs-7-1">
                       <p>Estamos comprometido em trazer aos nossos clientes o melhor em termos de valor e planos de viagem de qualidade. Somos apaixonados por viajar e por compartilhar as maravilhas do Rio com você.</p>
                       <div class="group-md group-middle">
-                        <a class="button button-secondary button-pipaluk" onclick="contato()" href="#">Entrar em Contato</a>
-                        <a class="button button-black-outline button-md" onclick="sobre()" href="#">Saiba Mais</a>
+                        <a class="button button-secondary button-pipaluk" data-toggle="modal" href="#modalContato">Entrar em Contato</a>
+                        <a class="button button-black-outline button-md" data-toggle="modal" href="#modalSobre">Saiba Mais</a>
                       </div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-2">
                       <p>Temos o orgulho de oferecer uma excelente qualidade em nossos passeios, que lhe dão a chance de vivenciar o destino escolhido de uma forma autêntica e emocionante.</p>
                       <div class="group-md group-middle">
-                        <a class="button button-secondary button-pipaluk" onclick="contato()" href="#">Entrar em Contato</a>
-                        <a class="button button-black-outline button-md" onclick="sobre()" href="#">Saiba Mais</a></div>
+                        <a class="button button-secondary button-pipaluk" data-toggle="modal" href="#modalContato">Entrar em Contato</a>
+                        <a class="button button-black-outline button-md" data-toggle="modal" href="#modalSobre">Saiba Mais</a></div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-3">
                       <p>Nossa missão é fornecer a melhor experiência em planejamento de viagens, trazendo segurança e conforto para toddo seu passeio.</p>
                       <div class="group-md group-middle">
-                        <a class="button button-secondary button-pipaluk" onclick="contato()" href="#">Entrar em Contato</a>
-                        <a class="button button-black-outline button-md" onclick="sobre()" href="#">Saiba Mais</a></div>
+                        <a class="button button-secondary button-pipaluk" data-toggle="modal" href="#modalContato">Entrar em Contato</a>
+                        <a class="button button-black-outline button-md" data-toggle="modal" href="#modalSobre">Saiba Mais</a></div>
                     </div>
                   </div>
                 </div>
@@ -247,14 +316,18 @@
     </div>
     <!-- SOBRE -->
     <div class="painel-sobre" style="display: none;">
-      <section class="section section-sm section-first bg-default text-md-left">
+      <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
         <div class="container">
           <div class="row row-40 justify-content-lg-between">
-            <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
-              <div class="oh-desktop">
-                <div class="wow slideInRight" data-wow-delay="0s">
-                  <h6 class="text-spacing-100 text-uppercase">Sobre</h6>
-                  
+            <div class="oh-desktop">
+              <div class="wow slideInRight" data-wow-delay="0s">
+                <h6 class="text-spacing-100 text-uppercase" style="margin: 2em;">Sobre</h6>
+                <div style="text-align: left;">
+                  Estamos comprometido em trazer aos nossos clientes o melhor em termos de valor e planos de viagem de qualidade. Somos apaixonados por viajar e por compartilhar as maravilhas do Rio com você.
+                  <br><br>
+                  Temos o orgulho de oferecer uma excelente qualidade em nossos passeios, que lhe dão a chance de vivenciar o destino escolhido de uma forma autêntica e emocionante.
+                  <br><br>
+                  Nossa missão é fornecer a melhor experiência em planejamento de viagens, trazendo segurança e conforto para toddo seu passeio.
                 </div>
               </div>
             </div>
@@ -263,19 +336,89 @@
     </div>
     <!-- FOTOS -->
     <div class="painel-fotos" style="display: none;">
-      <section class="section section-sm section-first bg-default text-md-left">
-        <div class="container">
+      <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
+        <div class="container-fluid">
           <div class="row row-40 justify-content-lg-between">
-            <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
-              <div class="oh-desktop">
-                <div class="wow slideInRight" data-wow-delay="0s">
-                  <h6 class="text-spacing-100 text-uppercase">Fotos</h6>
-                  
+            <h6 class="text-spacing-100 text-uppercase" style="margin: 2em;">Galeria</h6>
+            <!-- Owl Carousel-->
+            <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3"
+              data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0"
+              data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-mary">
+                <div class="thumbnail-mary-figure">
+                  <img src="images/angra01.jpg" alt="" width="270" height="195" />
                 </div>
-              </div>
+                <div class="thumbnail-mary-caption">
+                  <a class="icon fl-bigmug-line-zoom60" href="images/angra01.jpg" data-lightgallery="item">
+                    <img src="images/angra01.jpg" alt="" width="270" height="195" /></a>
+                </div>
+              </article>
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-mary">
+                <div class="thumbnail-mary-figure">
+                  <img src="images/cristo-redentor.jpg" alt="" width="270" height="195" />
+                </div>
+                <div class="thumbnail-mary-caption">
+                  <a class="icon fl-bigmug-line-zoom60" href="images/cristo-redentor.jpg" data-lightgallery="item">
+                    <img src="images/cristo-redentor.jpg" alt="" width="270" height="195" /></a>
+                </div>
+              </article>
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-mary">
+                <div class="thumbnail-mary-figure">
+                  <img src="images/ilhagrande.jpg" alt="" width="270" height="195" />
+                </div>
+                <div class="thumbnail-mary-caption">
+                  <a class="icon fl-bigmug-line-zoom60" href="images/ilhagrande.jpg" data-lightgallery="item">
+                    <img src="images/ilhagrande.jpg" alt="" width="270" height="195" /></a>
+                </div>
+              </article>
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-mary">
+                <div class="thumbnail-mary-figure">
+                  <img src="images/paodeacucar.jpg" alt="" width="270" height="195" />
+                </div>
+                <div class="thumbnail-mary-caption">
+                  <a class="icon fl-bigmug-line-zoom60" href="images/paodeacucar.jpg" data-lightgallery="item">
+                    <img src="images/paodeacucar.jpg" alt="" width="270" height="195" /></a>
+                </div>
+              </article>
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-mary">
+                <div class="thumbnail-mary-figure">
+                  <img src="images/angra.jpg" alt="" width="270" height="195" />
+                </div>
+                <div class="thumbnail-mary-caption">
+                  <a class="icon fl-bigmug-line-zoom60" href="images/angra.jpg" data-lightgallery="item">
+                    <img src="images/angra.jpg" alt="" width="270" height="195" /></a>
+                </div>
+              </article>
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-mary">
+                <div class="thumbnail-mary-figure">
+                  <img src="images/Buzios.jpg" alt="" width="270" height="195" />
+                </div>
+                <div class="thumbnail-mary-caption">
+                  <a class="icon fl-bigmug-line-zoom60" href="images/Buzios.jpg" data-lightgallery="item">
+                    <img src="images/Buzios.jpg" alt="" width="270" height="195" /></a>
+                </div>
+              </article>
+              <!-- Thumbnail Classic-->
+              <article class="thumbnail thumbnail-mary">
+                <div class="thumbnail-mary-figure">
+                  <img src="images/RJ01.jpg" alt="" width="270" height="195" />
+                </div>
+                <div class="thumbnail-mary-caption">
+                  <a class="icon fl-bigmug-line-zoom60" href="images/RJ01.jpg" data-lightgallery="item">
+                    <img src="images/RJ01.jpg" alt="" width="270" height="195" /></a>
+                </div>
+              </article>
             </div>
+          </div>
         </div>
       </section>
+              
     </div>
     <!-- CONTATO -->
     <div class="painel-contato" style="display: none;">
@@ -290,7 +433,7 @@
                     <li>
                       <div class="unit">
                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                        <div class="unit-body"><a class="link-phone" href="tel:#">+55 21-96486-7152 </a></div>
+                        <div class="unit-body"><a class="link-phone" href="https://wa.me/5521964867152">+55 21-96486-7152 </a></div>
                       </div>
                     </li>
                     <li>
@@ -325,7 +468,7 @@
                     <li>
                       <div class="unit">
                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                        <div class="unit-body"><a class="link-phone" href="tel:#">+55 21-96486-7152 </a></div>
+                        <div class="unit-body"><a class="link-phone" href="https://wa.me/5521964867152">+55 21-96486-7152 </a></div>
                       </div>
                     </li>
                     <li>
@@ -356,7 +499,7 @@
                     <li><a href="#">Blog</a></li>
                   </ul>
                   <div class="group-md group-middle justify-content-sm-start">
-                    <a class="button button-lg button-primary button-ujarak" href="#">Entrar em contato</a></div>
+                    <a class="button button-lg button-primary button-ujarak" href="https://wa.me/5521964867152">Entrar em contato</a></div>
                 </div>
               </div>
             </div>
@@ -392,6 +535,8 @@
   <div class="snackbars" id="form-output-global"></div>
   <!-- Javascript-->
   <script src="js/core.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
   <script src="js/script.js"></script>
   <script src="js/paginas.js"></script>
 
