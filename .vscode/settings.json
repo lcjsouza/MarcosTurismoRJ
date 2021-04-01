@@ -2,5 +2,7 @@
     "appService.zipIgnorePattern": [
         "node_modules{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/ab83bb4a-59aa-4e34-8613-bfe1b9628d52/resourceGroups/projetoTurismo/providers/Microsoft.Web/sites/maturismorj",
+    "appService.deploySubpath": "."
 }
