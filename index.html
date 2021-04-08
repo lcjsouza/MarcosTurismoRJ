@@ -17,6 +17,8 @@
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style_geral.css">
+  <link href="//amp.azure.net/libs/amp/latest/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+    
   <style>
     .ie-panel {
       display: none;
@@ -632,19 +634,19 @@
           <h6 class="text-spacing-100 text-uppercase" style="margin: 2em;">Vídeos</h6>
           <!-- Owl Carousel-->
           <div class="carrossel-videos">
-            <video class="tamanho-video" controls>
+            <video id="vid1" class="azuremediaplayer amp-default-skin tamanho-video" autoplay controls data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"], "nativeControlsForTouch": false}'>
               <source src="/videos/VideoAngra02.mp4" type="video/mp4">
             </video>
-            <video class="tamanho-video" controls>
+            <video id="vid2" class="azuremediaplayer amp-default-skin tamanho-video" autoplay controls data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"], "nativeControlsForTouch": false}'>
               <source src="/videos/VideoAngra03.mp4" type="video/mp4">
             </video>
-            <video class="tamanho-video"  controls>
+            <video id="vid3" class="azuremediaplayer amp-default-skin tamanho-video" autoplay  controls data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"], "nativeControlsForTouch": false}'>
               <source src="/videos/VideoAngra04.mp4" type="video/mp4">
             </video>
-            <video class="tamanho-video"  controls>
+            <video id="vid4" class="azuremediaplayer amp-default-skin tamanho-video" autoplay  controls data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"], "nativeControlsForTouch": false}'>
               <source src="/videos/VideoAngra05.mp4" type="video/mp4">
             </video>
-            <video class="tamanho-video"  controls>
+            <video id="vid5" class="azuremediaplayer amp-default-skin tamanho-video" autoplay  controls data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"], "nativeControlsForTouch": false}'>
               <source src="/videos/VideoAngra06.mp4" type="video/mp4">
             </video>
           </div>
@@ -773,16 +775,11 @@
   
   <script src="js/slick.min.js"></script>
   <script src="js/paginas.js"></script>
-  
+  <script src= "//amp.azure.net/libs/amp/latest/azuremediaplayer.min.js"></script>
   <script>
- /*  $(document).ready(function(){
-    $('.carrossel').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3
-    });
-  }); */
-</script>
+    amp.options.flashSS.swf = "//amp.azure.net/libs/amp/latest/techs/StrobeMediaPlayback.2.0.swf"
+    amp.options.silverlightSS.xap = "//amp.azure.net/libs/amp/latest/techs/SmoothStreamingPlayer.xap"
+  </script>
 </body>
 
 </html>
