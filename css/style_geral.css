@@ -1,0 +1,22 @@
+.carrossel {
+    height: auto;
+}
+
+.slick-prev:before, .slick-next:before{
+    color: black !important;
+}
+
+.slick-prev:hover, .slick-next:hover{
+    color: black !important;
+}
+
+.tamanho-video{
+    width: 200px !important;
+    margin: 10px 50px;
+}
+
+.t-fotosModal{
+    width: 300px !important;
+    margin: 10px 20px;
+    border: 1px solid;
+}

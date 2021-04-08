@@ -1,32 +1,41 @@
 function sobre(){
     $(".painel-inicio").hide();
     $(".painel-sobre").show();
-    $(".painel-fotos").hide();
+    $(".painel-galeria").hide();
     $(".painel-contato").hide();
     $(".nav-inicio").removeClass("active");
     $(".nav-sobre").addClass("active");
-    $(".nav-fotos").removeClass("active");
+    $(".nav-galeria").removeClass("active");
     $(".nav-contato").removeClass("active");   
 }
 
-function fotos(){
+function galeria(){
     $(".painel-inicio").hide();
     $(".painel-sobre").hide();
-    $(".painel-fotos").show();
+    $(".painel-galeria").show();
     $(".painel-contato").hide();
     $(".nav-inicio").removeClass("active");
     $(".nav-sobre").removeClass("active");
-    $(".nav-fotos").addClass("active");
+    $(".nav-galeria").addClass("active");
     $(".nav-contato").removeClass("active");   
 }
 
 function contato(){
     $(".painel-inicio").hide();
     $(".painel-sobre").hide();
-    $(".painel-fotos").hide();
+    $(".painel-galeria").hide();
     $(".painel-contato").show();
     $(".nav-inicio").removeClass("active");
     $(".nav-sobre").removeClass("active");
-    $(".nav-fotos").removeClass("active");
+    $(".nav-galeria").removeClass("active");
     $(".nav-contato").addClass("active");   
 }
+
+$(function(){
+    $('.carrossel-videos').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+    });
+     
+});
