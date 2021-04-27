@@ -11,8 +11,10 @@
 }
 
 .tamanho-video{
-    width: 200px !important;
-    margin: 10px 50px;
+    width: 350px !important;
+    height: 500px !important;
+    margin: 10px 20px;
+    border: 1px solid;
 }
 
 .t-fotosModal{
