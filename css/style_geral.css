@@ -19,6 +19,48 @@
 
 .t-fotosModal{
     width: 300px !important;
+    height: 270px !important;
     margin: 10px 20px;
-    border: 1px solid;
+}
+
+.t-fotosGaleria{
+    width: 300px !important;
+    height: 200px !important;
+    margin: 10px 20px;
+}
+
+@media (max-device-width: 900px) {
+    .titulo-celular{
+       text-align: center;
+       font-style: italic;
+    }
+
+    .t-fotosGaleria{
+        width: 200 !important;
+        height: 200 !important;
+        margin: 10px 20px;
+    }
+
+    .t-fotosModal{
+        width: 100 !important;
+        height: 70 !important;
+        margin: 10px 20px;
+    }
+
+    .tamanho-video{
+        width: 250px !important;
+        height: 400px !important;
+    }
+
+    .brand-celular{
+        position: relative;
+        margin-left: 6px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        text-align: center;
+        font-size: 18px;
+        line-height: 46px;
+        
+    }
 }
